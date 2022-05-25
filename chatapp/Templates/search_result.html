@@ -1,0 +1,11 @@
+{%extends 'layout.html'%}
+{%block body%}
+    <h1>Search Results</h1>
+	{% for i in data %}
+        <a href="{{ url_for('user.profile', name = i.username) }}">
+            <div class="contact-container">
+                <p>{{ i.username }}</p>
+            </div>
+        </a>
+    {% endfor %}
+{%endblock body%}

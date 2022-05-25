@@ -1,0 +1,14 @@
+{%extends 'layout.html'%}
+{%block body%}
+        {% if contacts %}
+            {% for contact in contacts %}
+            <a href="#">
+                <div class = 'contact-container'>
+                    <p>This is {{ contact }} icon</p>
+			    </div>
+            </a>
+            {% endfor %}
+        {% else %}
+            <p>You don't have any chats yet</p>
+        {% endif %}
+{%endblock body%}

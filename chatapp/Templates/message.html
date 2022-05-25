@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <h1>{{ reciever.username }}</h1>
+    <div class="message-group" >
+        {% for message in messages %}
+            <p class="message-container">{{ message.content }} <small>{{ message.date }}</small></p>
+        {% endfor %}
+    </div>
+    <div class = "form-group">
+        <textarea id="messageBox" name = '{{ current_user.username }}'></textarea>
+        <button class = "btn btn-outline-dark" onclick="handleMessage()" id = 'msgButton' name="{{ reciever.username }}">Send</button>
+    </div>
+{% endblock body %}
